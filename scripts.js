@@ -5,7 +5,7 @@ var stack = [];
 var current;
 
 function setup() {
-  createCanvas(lawnSize[0], lawnSize[1]);
+  createCanvas(windowWidth, windowHeight);
   cols = floor(width / w);
   rows = floor(height / w);
   frameRate(fr);

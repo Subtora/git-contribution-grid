@@ -1,5 +1,5 @@
 var lawnmowerSize = 25;
-var lawnSize = [500, 500];
+//var lawnSize = [windowWidth, windowHeight];
 
 var bk = [59, 89, 72]; //lawn background color
 var rc = [205, 44, 36]; //lawnmower background color
