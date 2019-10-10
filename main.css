@@ -1,7 +1,10 @@
 body {
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #24292e;
+  background-color: #fff;
 }
 .config {
   position: relative;

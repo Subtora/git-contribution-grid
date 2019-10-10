@@ -1,11 +1,12 @@
 var cols, rows;
-var w = lawnmowerSize;
+var w = runnerSize;
 var grid = [];
 var stack = [];
 var current;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  var myCanvas = createCanvas(gridSize[0], gridSize[1]);
+  myCanvas.parent("svgCanvas");
   cols = floor(width / w);
   rows = floor(height / w);
   frameRate(fr);

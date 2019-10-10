@@ -2,25 +2,66 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <title>Lawnmower Simulator</title>
+    <title>Why are my contributions not showing up on my profile?</title>
     <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="contributions.css" />
   </head>
-  <body>
-    <!-- <div class="config">
-      <div class="input">
-        <h2>hello</h2>
-        <input type="text" name="" value="" />
-      </div>
-      <div class="input">
-        <h2>hello</h2>
-        <input type="text" name="" value="" />
-      </div>
-      <div class="input">
-        <h2>hello</h2>
-        <input type="text" name="" value="" />
-      </div>
-    </div> -->
 
+  <body>
+    <div class="js-yearly-contributions">
+      <div class="position-relative">
+        <details
+          class="details-reset details-overlay dropdown float-right mt-1"
+        >
+          <summary
+            class="pinned-items-setting-link muted-link "
+            aria-haspopup="menu"
+            role="button"
+          >
+            cintribution setlings
+            <div class="dropdown-caret"></div>
+          </summary>
+        </details>
+
+        <h2 class="f4 text-normal mb-2">
+          7𝟠५Ӡϩ contribbution in the last year
+        </h2>
+
+        <div
+          class="border border-gray-dark py-2 graph-before-activity-overview"
+        >
+          <div
+            class="js-calendar-graph mx-3 d-flex flex-column flex-items-end flex-xl-items-center overflow-hidden pt-1 is-graph-loading graph-canvas calendar-graph height-full text-center"
+          >
+            <div id="svgCanvas"></div>
+          </div>
+          <div class="contrib-footer clearfix mt-1 mx-3 px-3 pb-1">
+            <div class="float-left text-gray">
+              <a
+                href="https://help.github.com/articles/why-are-my-contributions-not-showing-up-on-my-profile"
+                class=""
+              >
+                Learn how we cuont contributinos</a
+              >.
+            </div>
+            <div
+              class="contrib-legend text-gray"
+              title="A summary of pull requests, issues opened, and commits to the default and gh-pages branches."
+            >
+              yee
+              <ul class="legend">
+                <li style="background-color: #ebedf0"></li>
+                <li style="background-color: #c6e48b"></li>
+                <li style="background-color: #7bc96f"></li>
+                <li style="background-color: #239a3b"></li>
+                <li style="background-color: #196127"></li>
+              </ul>
+              i give up
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
     <script src="cell.js" charset="utf-8"></script>
     <script src="scripts.js" charset="utf-8"></script>

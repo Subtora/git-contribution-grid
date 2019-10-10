@@ -1,19 +1,45 @@
-var lawnmowerSize = 25;
-//var lawnSize = [windowWidth, windowHeight];
-
-var bk = [59, 89, 72]; //lawn background color
-var rc = [205, 44, 36]; //lawnmower background color
-var rt = [182, 191, 149]; //lawnmower trail background color
-var ro = [0, 0, 0]; //lawnmower trail outline color
+var gScale = 1.55;
+var runnerSize = 10 * gScale;
+var gridSize = [450 * gScale, 70 * gScale];
+var cCount = 0;
 var sc = [255, 255, 255]; //map stroke color
-var sw = 0; //map stroke weight
-var fr = 100; //frameRate
+var sw = 3.5; //map stroke weight
+var fr = 15; //frameRate
+
+var bk = [235, 237, 240]; //grid background color
+var rc = [235, 237, 240]; //runner background color
+var rt = [
+  [25, 97, 39], //dark green
+  [35, 154, 59], //medium dark green
+
+  [123, 201, 111], //medium light green
+  [123, 201, 111], //medium light green
+  [123, 201, 111], //medium light green
+
+  [198, 228, 139], //light green
+  [198, 228, 139], //light green
+  [198, 228, 139], //light green
+  [198, 228, 139] //light green
+]; //lawnmower trail background color
 
 function Cell(i, j) {
   this.i = i;
   this.j = j;
   this.visited = false;
   this.walls = [true, true, true, true];
+  var rColor = floor(random(0, rt.length));
+
+  switch (rt[rColor][0]) {
+    case 25:
+      cCount += 8;
+      break;
+    case 123:
+      cCount += 5;
+      break;
+    case 198:
+      cCount += 2;
+      break;
+  }
 
   this.checkNeighbors = function() {
     var neighbors = [];
@@ -45,8 +71,6 @@ function Cell(i, j) {
     var x = this.i * w;
     var y = this.j * w;
     fill(rc[0], rc[1], rc[2]);
-    strokeWeight(lawnmowerSize / 10);
-    stroke(ro[0], ro[1], ro[2]);
     rect(x, y, w, w);
   };
   this.show = function() {
@@ -68,8 +92,8 @@ function Cell(i, j) {
     }
 
     if (this.visited) {
-      noStroke();
-      fill(rt[0], rt[1], rt[2]);
+      //noStroke();
+      fill(rt[rColor][0], rt[rColor][1], rt[rColor][2]);
       rect(x, y, w, w);
     }
   };
