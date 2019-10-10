@@ -1,4 +1,4 @@
-# lawn-mowing-simulator
-just a maze generator but it's more fun because its a mowing a lawn :)
+# git-contribution-grid
+randomly fills a git-contribution-grid
 
- https://subtora.github.io/lawn-mowing-simulator/
+ https://subtora.github.io/git-contribution-grid/
